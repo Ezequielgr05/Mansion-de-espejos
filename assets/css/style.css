@@ -1,0 +1,471 @@
+/* title                                             fonts                                                    */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* title                                             other                                                    */
+* {
+    margin: 0;
+}
+
+/* title                                           Templates                                                  */
+
+/* section: Situation */
+#situation {
+    display: grid;
+    grid-template-areas: 
+        ". ."
+        ". option1"
+        ". option2"
+        "dialogeS dialogeS";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr 1fr 3fr;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+}
+
+#option1 {grid-area: option1; margin-right: 15px;}
+#option2 {grid-area: option2; margin-right: 15px;}
+#dialogeS {grid-area: dialogeS; margin-right: 15px; margin-bottom: 15px; margin-left: 15px;}
+
+@media (min-width: 768px) {#situation {grid-template-columns: 3fr 2fr;}}
+@media (min-width: 1200px) {#situation {grid-template-columns: 3.5fr 2fr;}}
+@media (min-width: 1440px) {#situation {grid-template-columns: 4fr 2fr;}}
+@media (min-width: 2560px) {#situation {grid-template-columns: 6fr 2fr;}}
+
+/* section: Computer */
+#computer {
+    display: grid;
+    grid-template-areas: 
+    "dialogeC dialogeC dialogeC dialogeC ."
+    ". . . . ."
+    ". . notification1 notification1 notification1"
+    ". . notification2 notification2 notification2"
+    "footer footer footer footer footer";
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: 2fr 1fr 1fr 1fr 60px;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+}
+
+#dialogeC { grid-area: dialogeC; margin-top: 10px; margin-left: 10px;}
+#notification1 {grid-area: notification1; margin-right: 10px;}
+#notification2 {grid-area: notification2; margin-right: 10px;}
+#footer {grid-area: footer;}
+
+@media (min-width: 768px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC dialogeC ." ". . . . ." ". . . notification1 notification1" ". . . notification2 notification2" ". . . . ." "footer footer footer footer footer";}}
+@media (min-width: 1024px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC . ." ". . . . ." ". . . notification1 notification1" ". . . notification2 notification2" ". . . . ." "footer footer footer footer footer";}}
+@media (min-width: 1366px) {#computer {grid-template-areas: "dialogeC dialogeC . . ." ". . . . ." ". . . . notification1" ". . . . notification2" ". . . . ." "footer footer footer footer footer";}}
+@media (min-width: 1440px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC . ." ". . . . ." ". . . . notification1" ". . . . notification2" ". . . . ." "footer footer footer footer footer";}}
+@media (min-width: 2560px) {#computer {grid-template-areas: "dialogeC dialogeC . . ." ". . . . ." ". . . . notification1" ". . . . notification2" ". . . . ." "footer footer footer footer footer";}}
+
+/* section: Map */
+#map {
+    display: grid;
+    grid-template-areas: 
+    ". ."
+    "compass dialogeM"
+    ". .";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr 20px;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+}
+
+#compass {grid-area: compass; margin-left: 15px; margin-bottom: 15px;}
+#dialogeM{grid-area: dialogeM; margin-right: 15px; margin-bottom: 15px;}
+
+@media (min-width: 1024px) {#map{grid-template-columns: 2fr 4fr;}}
+@media (min-width: 1366px) {#map{grid-template-columns: 2fr 6fr;}}
+@media (min-width: 2560px) {#map{grid-template-columns: 2fr 8fr;}}
+
+/* section: archive */
+#archive{
+    display: grid;
+    grid-template-areas:
+    ". . ." 
+    ". screen ."
+    ". . ."
+    "footer footer footer";
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-rows: 30px 1fr 30px 60px;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+}
+
+#screen{grid-area: screen;}
+
+@media (min-width: 768px) {#archive{grid-template-columns: 55px 1fr 55px; grid-template-rows: 55px 1fr 55px 60px;}}
+@media (min-width: 1024px) {#archive{grid-template-columns: 150px 1fr 150px;}}
+@media (min-width: 1366px) {#archive{grid-template-columns: 250px 1fr 250px;}}
+@media (min-width: 2560px) {#archive{grid-template-columns: 550px 1fr 550px;}}
+
+/* section: clases globales */
+.option, .dialoge {
+    display: flex;
+    gap: 10px;
+}
+
+.dialoge {flex-flow: column nowrap;}
+
+.option {
+    flex-flow: row nowrap;
+    justify-content: right;
+    align-items: center;
+}
+
+.option {
+    filter: sepia(0.2) contrast(1.1);
+    transform: rotate(2deg);
+    border: none;
+}
+
+.option_number, .option_text {
+    padding: 10px; 
+    font-family: "Fredericka the Great", serif; 
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.option_text {
+    color: #fefcf7;
+    border: 1px solid #d4cfc4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: #111111;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+}
+
+.option_number {
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+    color: aliceblue;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.15),
+        0 2px 4px rgba(0, 0, 0, 0.15),
+        0 4px 8px rgba(0, 0, 0, 0.15),
+        0 8px 16px rgba(0, 0, 0, 0.15),
+        0 16px 32px rgba(0, 0, 0, 0.15),
+        0 32px 64px rgba(0, 0, 0, 0.15);
+}
+
+.dialoge {
+    padding: 20px;
+    border: 1px solid #d4cfc4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #111111;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+    filter: sepia(0.2) contrast(1.1);
+    transform: rotate(-1deg);
+    margin-top: 20px;
+}
+
+.dialoge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px dashed rgba(179, 179, 179, 0.623);
+    pointer-events: none;
+    transform: rotate(-2deg);
+}
+
+.dialoge_img {
+    width: 100%;
+    height: 70%;
+    margin-left: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 
+        0 1px 2px rgba(255, 255, 255, 0.15),
+        0 2px 4px rgba(255, 255, 255, 0.15),
+        0 4px 8px rgba(255, 255, 255, 0.15),
+        0 8px 16px rgba(255, 255, 255, 0.15),
+        0 16px 32px rgba(255, 255, 255, 0.15),
+        0 32px 64px rgba(255, 255, 255, 0.15);
+}
+
+.dialoge_title, .dialoge_text {
+    font-family: "Fredericka the Great", serif; 
+    font-weight: 600;
+    text-align: justify;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #fefcf7;
+    letter-spacing: 1px;
+}
+
+.dialoge_title {font-size: 25px;}
+
+.dialoge_text {font-size: 17px;}
+
+.computer {
+    background-image: url("../img/backgrounds/windows.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+.notificacion {
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #a1e7e7;
+    background-color: #d1ffff;
+    border-radius: 10px;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+.notificacion_title {text-align: center;}
+
+.notificacion_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.notificacion_text {
+    color: #383838;
+    text-align: center;
+    margin: 5px;
+}
+
+.notificacion_accept, .notificacion_decline {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.notificacion_accept {
+    background-color: #01da01;
+    color: #ffffff;
+}
+.notificacion_accept:hover {background-color: #00c000;}
+.notificacion_accept:active {background-color: #00ac00;}
+
+.notificacion_decline {
+    background-color: #ff4848;
+    color: #ffffff;
+}
+.notificacion_decline:hover{background-color: #ec4343;}
+.notificacion_decline:hover{background-color: #da3f3f;}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: #57dfdf;
+    border: none;
+}
+
+.footer_icon {
+    width: 56px;
+    height: 56px;
+    margin-left: 5px;
+}
+
+.footer_app {
+    width: 50px;
+    height: auto;
+    margin-left: 20px;
+    background-color: #49c0c0;
+    padding: 8px;
+}
+
+.window {
+    display: grid;
+    grid-template-areas: 
+    "Wheader Wheader"
+    "Wnav Wcomponent";
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 30px 1fr;
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+    background-color: #d1ffff;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+.window_header{
+    grid-area: Wheader;
+    background-color: #57dfdf;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.window_header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    gap: 5px;
+}
+
+.window_header div img {
+    width: 28px;
+    height: auto;
+}
+
+.window_nav{grid-area: Wnav; background-color: #a1e7e7;}
+
+.window_nav ul li {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+.window_nav ul li p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.window_nav ul {
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.window_nav_icon {
+    width: 30px;
+    height: auto;
+}
+
+.window_nav_select {
+    background-color: #90cccc;
+}
+
+.window_component{
+    grid-area: Wcomponent;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.window_component_document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 70px;
+    height: fit-content;
+}
+
+.window_component_document:hover {background-color: #a1e7e7;}
+.window_component_document:active {background-color: #90cccc;}
+
+.window_component_document img {
+    width: 40px;
+}
+.window_component_document p {
+    width: 70px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+}
+
+.compass {
+    border: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrowpad {
+    display: flex;
+}
+
+.arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    color: white;
+    font-size: 35px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: #141414;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+    /* section: variantes del dialogo*/
+    .exclamacion{position: relative;}
+
+    .exclamacion::after, .pregunta::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-40deg);
+        font-size: 30px;
+        font-family: "Fredericka the Great", serif;
+        font-weight: 600;
+        letter-spacing: 3px;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #131313;
+        top: -30px;
+        left: -20px;
+        border: 1px solid #4e4e4e;
+        background-image: url("https://www.transparenttextures.com/patterns/dark-dot.png");
+    }
+
+    .exclamacion::after {
+        content: '!!!';
+        color: #fdca7c;
+        box-shadow: 
+        0 1px 2px rgba(255, 165, 29, 0.15),
+        0 2px 3px rgba(255, 165, 29, 0.15),
+        0 3px 4px rgba(255, 165, 29, 0.15),
+        0 4px 5px rgba(255, 255, 255, 0.15),
+        0 5px 6px rgba(255, 255, 255, 0.15),
+        0 6px 7px rgba(255, 255, 255, 0.15);
+    }
+
+    .exclamacion_text {color: #ffd79c;}
+    .pregunta{position: relative;}
+
+    .pregunta::after {
+        content: '???';
+        color: #ff4848;
+        box-shadow: 
+        0 1px 2px rgba(255, 29, 29, 0.15),
+        0 2px 3px rgba(255, 16, 16, 0.15),
+        0 3px 4px rgba(255, 29, 29, 0.15),
+        0 4px 5px rgba(255, 255, 255, 0.15),
+        0 5px 6px rgba(255, 255, 255, 0.15),
+        0 6px 7px rgba(255, 255, 255, 0.15);
+    }
+
+    .pregunta_text {color: #ffbaba;}
