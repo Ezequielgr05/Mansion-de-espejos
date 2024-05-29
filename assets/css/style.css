@@ -54,7 +54,7 @@
 #notification2 {grid-area: notification2; margin-right: 10px;}
 #footer {grid-area: footer;}
 
-@media (min-width: 768px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC dialogeC ." ". . . . ." ". . . notification1 notification1" ". . . notification2 notification2" ". . . . ." "footer footer footer footer footer";}}
+@media (min-width: 768px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC dialogeC ." ". . . . ." ". . notification1 notification1 notification1" ". . notification2 notification2 notification2" ". . . . ." "footer footer footer footer footer";}}
 @media (min-width: 1024px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC . ." ". . . . ." ". . . notification1 notification1" ". . . notification2 notification2" ". . . . ." "footer footer footer footer footer";}}
 @media (min-width: 1366px) {#computer {grid-template-areas: "dialogeC dialogeC . . ." ". . . . ." ". . . . notification1" ". . . . notification2" ". . . . ." "footer footer footer footer footer";}}
 @media (min-width: 1440px) {#computer {grid-template-areas: "dialogeC dialogeC dialogeC . ." ". . . . ." ". . . . notification1" ". . . . notification2" ". . . . ." "footer footer footer footer footer";}}
@@ -215,6 +215,8 @@
     background-image: url("../img/backgrounds/windows.png");
     background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     font-family: "Roboto", sans-serif;
 }
