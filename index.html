@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    
+<body class="page_principal">
+    <img src="./assets/img/icons/profile.png" alt="ranita de windows xp" class="page_img">
+    <form class="page_form_new" id="form_new">
+        <label for="name" class="page_form_label">Tu nombre</label>
+        <input type="text" name="name" id="name" class="page_form_input" placeholder="Pon tu nombre">
+        <label for="user" class="page_form_label">Tu usuario</label>
+        <input type="text" name="user" id="user" class="page_form_input" placeholder="Pon tu usuario">
+        <input type="submit" value="terminar" class="page_form_submit" id="form_submit">
+    </form>
+    <div class="page_form_old" id="form_old">
+        <h3 class="page_form_title" id="usuario">User</h3>
+        <button class="page_form_submit" id="entrar">Entrar</button>
+    </div>
+
+    <script src="./assets/js/form.js"></script>
 </body>
 </html>

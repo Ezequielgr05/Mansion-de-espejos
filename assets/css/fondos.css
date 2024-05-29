@@ -1,0 +1,21 @@
+#mb1, #mb2, #mb3, #mb4, #mb5, #S4B1, #S4B2, #ma1, #ma2, #ma3, #ma4, #ma5 {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mb1 {background-image: url("../img/backgrounds/bosque/sendero_del_bosque.png");}
+#mb2 {background-image: url("../img/backgrounds/bosque/claro_del_bosque.png");}
+#mb3 {background-image: url("../img/backgrounds/bosque/arroyo_del_bosque.png");}
+#mb4 {background-image: url("../img/backgrounds/bosque/arboles_retorcidos.png");}
+#mb5 {background-image: url("../img/backgrounds/bosque/cabana_abandonada.png");}
+
+#ma1 {background-image: url("../img/backgrounds/pueblo/entrada_del_pueblo.png");}
+#ma2 {background-image: url("../img/backgrounds/pueblo/plaza_central.png");}
+#ma3 {background-image: url("../img/backgrounds/pueblo/iglesia_abandonada.png");}
+#ma4 {background-image: url("../img/backgrounds/pueblo/casa_destruida.png");}
+#ma5 {background-image: url("../img/backgrounds/pueblo/callejon_solitario.png");}
+
+#S4B1 {background-image: url("../img/backgrounds/Mansion/mansion_delante.png");}
+#S4B2 {background-image: url("../img/backgrounds/Mansion/mansion_atras.png");}
+#S4A2 {background-image: url("../img/backgrounds/pueblo/callejon_sin_salida.png");}

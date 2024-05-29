@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="computer">
+    <section id="computer">
+        <article id="dialogeC" class="dialoge">
+            <h1 class="dialoge_title" id="dialoge"></h1>
+            <p class="dialoge_text" id="dialoge_text">Wow, ni bien configure la computadora que me dio la agencia y ya tengo 2 casos. Aunque es raro el segundo no dice nada. Supongo que sera un bug. ¿Cual de estos casos deberia elegir?</p>
+        </article>
+        <article id="notification1" class="notificacion d-none slide-in-fwd-right">
+            <h3 class="notificacion_title">Jefe de la agencia</h3>
+            <p class="notificacion_text">Hola! aqui tu jefe. ya veo que has configurado la computadora que te di. En fin, tu primer caso sera un homicidio, ocurrio en los alrededores de una mansion. si aceptas el caso pon <strong>abrir</strong></p>
+            <div class="notificacion_buttons">
+                <button class="notificacion_accept" id="accept1">Abrir</button>
+                <button class="notificacion_decline" id="decline1">Rechazar</button>
+            </div>
+        </article>
+        <article id="notification2" class="notificacion d-none slide-in-fwd-right">
+            <h3 class="notificacion_title">Ayuda</h3>
+            <p class="notificacion_text">...</p>
+            <div class="notificacion_buttons">
+                <button class="notificacion_accept" id="accept2">Abrir</button>
+                <button class="notificacion_decline" id="decline2">Rechazar</button>
+            </div>
+        </article>
+        <article id="footer" class="footer">
+            <img src="../img/icons/inicio.png" alt="boton de inicio de windows xp" class="footer_icon">
+        </article>
+    </section>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
